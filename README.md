@@ -26,7 +26,7 @@ The [SignU.In](http://signu.in) services are meant to help the developers have a
     <forms name=".ASPXFORMS" loginUrl="https://signu.in/Home/Login?d=demo.signu.in" protection="All" path="/" timeout="30"/>
 </authentication>
 ```
-Change the **"?d=demo.signu.in"** with the actual url to your website once it is publish. 
+Change the **"?d=demo.signu.in"** with the actual url to your website when publish. 
 
 ![Open the web.config](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic5.png)
 
@@ -41,7 +41,7 @@ filters.Add(new SignU.In.MVCFilter.AuthenticationFilterDev());
 
 ![Open FilterConfig](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic6.png)
 
-7.- Open the file **"\Controllers\HomeController.cs"**, add the Logout ActionResult and the ViewBag to the Index ActionResult:
+7.- Open the file **"\Controllers\HomeController.cs"**, add the Logout ActionResult method and the ViewBag to the Index ActionResult:
 ```
 public ActionResult Index()
 {
@@ -57,7 +57,7 @@ public ActionResult Logout()
 
 ![Open HomeController](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic7.png)
 
-8.- Open the file **"\Views\Home\Index.cshtml"** and change **div** with the **jumbotron** class with this html:
+8.- Open the file **"\Views\Home\Index.cshtml"** and change the **div** with the **jumbotron** class with this code:
 ```
  <div class="jumbotron">
     <h1>ASP.NET with SignU.In</h1>
@@ -77,7 +77,8 @@ public ActionResult Logout()
 
 ![website properties](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic9.png)
 
-2.- Press **F5** to run the site. It will intermediately send you to the Signu.In site, but it won't work since we are at developer mode.
+2.- Press **F5** to run the site. It will intermediately send you to the Signu.In site, but it won't work since we are in developer mode.
+
 Paste the url that you copy at the address bar of the browser and add a Query string like this **"?d=test@test.com"**
 
 ![Run the site](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic10.png)
@@ -86,7 +87,8 @@ Paste the url that you copy at the address bar of the browser and add a Query st
 
 ![Signing In](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic11.png)
 
-##Very Important Note:
+##Very Important Note :
+###Please read all!
 Please remember that we specify to use the **development** filter.
 
 ![Open FilterConfig](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic6.png)
@@ -98,9 +100,17 @@ For production environment switch the filter:
 ![Open FilterConfig](https://raw.githubusercontent.com/proteo5/SignU.In-Sample/master/Content/Pic12.png)
 
 Due to security reasons, the SignU.In authentication service **will not work** with a **"localhost"** domain name in any circumstances.
+
 The features and implantation used for the production environment are **complete different** to the development environment.
-The development environment is provided so it can be very easy for the developer to implement the functionality for thir site.
-Also, this service only provides the authentication for your site. It will be needed for you to implment the authorization.
-It is very important to properly handle this on your site. Se [this article](http://www.bu.edu/tech/about/security-resources/bestpractice/auth/) as a reference 
+
+The development environment is provided so it can be very easy for the developer to work in his website or web application.
+
+Also, this service **only provides the authentication** for your site. 
+
+**It will be needed that you implment the authorization.** 
+
+It is very important to properly handle this on your site. 
+
+Se [this article](http://www.bu.edu/tech/about/security-resources/bestpractice/auth/) as a reference 
 
 For any questions please post it at [stackoverflow.com](stackoverflow.com) with the tag **"SignU.In"** and I will be happy to help.
