@@ -113,4 +113,4 @@ It is very important to properly handle this on your site.
 
 Se [this article](http://www.bu.edu/tech/about/security-resources/bestpractice/auth/) as a reference 
 
-For any questions please post it at [stackoverflow.com](stackoverflow.com) with the tag **"SignU.In"** and I will be happy to help.
+For any questions please post it at [stackoverflow.com](http://stackoverflow.com) with the tag **"SignU.In"** and I will be happy to help.
